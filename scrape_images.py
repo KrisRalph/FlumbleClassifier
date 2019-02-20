@@ -24,7 +24,6 @@ async def get_images_from_channels():
     # if just flumblezone content
     flumblezone = [client.get_channel("422924857555288064")]
     tasks = [collect_channel(c) for c in channels]
-    print("before gather")
     return await asyncio.gather(*tasks)
 
 async def collect_channel(c):
